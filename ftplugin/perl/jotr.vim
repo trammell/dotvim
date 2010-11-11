@@ -14,10 +14,17 @@ setlocal textwidth=78
 setlocal list
 setlocal listchars=trail:-,tab:\.\
 
-:let maplocalleader = ","
-:let perl_fold=1
+let maplocalleader = ","
+let perl_fold=1
+
+function! StandardPODHeader()
+    exe  "normal o=pod\r\e"
+    exe  "normal o=head1 NAME\r\e"
+    exe  "normal o=head1 SYNOPSIS\r\e"
+    exe  "normal o=head1 DESCRIPTION\r\e"
+    exe  "normal o=cut\r\e"
+endfunction
 
 " mappings
-" FIXME: can we wrap this long line somehow?
-nmap <LocalLeader>p i<CR>=pod<CR><CR>=head1 NAME<CR><CR>=head1 SYNOPSIS<CR><CR>=head1 DESCRIPTION<CR><CR>=cut<CR><ESC>
-nmap <LocalLeader>s iuse strict;<CR>use warnings;<CR><ESC>
+nmap <LocalLeader>p :call StandardPODHeader()<CR>
+nmap <LocalLeader>s iuse strict;<CR>use warnings FATAL => 'all';<CR><ESC>

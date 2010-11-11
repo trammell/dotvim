@@ -1,0 +1,16 @@
+To add a new submodule:
+
+   git submodule add git://github.com/some/module.git bundle/vim-module
+
+To initialize a newly added submodule:
+
+   git submodule init
+
+To check for updates:
+
+   git submodule update
+
+Resources:
+
+   http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+   http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/

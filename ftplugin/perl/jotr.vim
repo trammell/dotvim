@@ -18,11 +18,11 @@ let maplocalleader = ","
 let perl_fold=1
 
 function! StandardPODHeader()
-    exe  "normal o=pod\r\e"
-    exe  "normal o=head1 NAME\r\e"
-    exe  "normal o=head1 SYNOPSIS\r\e"
-    exe  "normal o=head1 DESCRIPTION\r\e"
-    exe  "normal o=cut\r\e"
+    put ='=pod'                 | put =''
+    put ='=head1 NAME'          | put =''
+    put ='=head1 SYNOPSIS'      | put =''
+    put ='=head1 DESCRIPTION'   | put =''
+    put ='=cut'                 | put =''
 endfunction
 
 " mappings

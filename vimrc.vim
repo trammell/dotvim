@@ -91,6 +91,9 @@ set whichwrap=<,>,h,l,[,]
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" NERDTree config
+let NERDTreeIgnore=['\.pyc$','\.swp$']
+
 " fugitive status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 

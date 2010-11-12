@@ -11,11 +11,11 @@ filetype plugin indent on
 setlocal autoindent
 setlocal expandtab
 setlocal tabstop=4
-setlocal textwidth=78
-setlocal number
+setlocal textwidth=80
+"setlocal number
 
 " set up mappings for python
 :let maplocalleader = ","
 
-nmap <LocalLeader>f oimport pdb; pdb.set_trace()<ESC>
+nmap <LocalLeader>p oimport pdb; pdb.set_trace()<ESC>
 nmap <LocalLeader>v oimport vimpdb; vimpdb.set_trace()<ESC>

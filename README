@@ -10,7 +10,17 @@ To check for updates:
 
    git submodule update
 
+To remove a submodule (I'm looking at you, gist-vim):
+
+   1. remove the submodule's entry from .gitmodules
+   2. remove the submodule's entry from .gitconfig
+   3. remove the path created for the submodule:
+
+         git rm --cached bundle/gist.vim
+         rm -rf bundle/gist.vim
+
 Resources:
 
    http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
    http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+   http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/

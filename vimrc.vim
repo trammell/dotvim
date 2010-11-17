@@ -19,6 +19,12 @@ syntax sync fromstart
 set list
 set listchars=trail:-,tab:\.\
 
+" hide buffers instead of closing them
+set hidden
+
+" quick paste/nopaste toggling
+set pastetoggle=<F2>
+
 " FIXME
 filetype on
 

@@ -74,6 +74,10 @@ perl << EOF
 EOF
 endfunction
 
+" Quickly edit/reload the vimrc file
+nmap <silent> <Leader>ev :e $MYVIMRC<CR>
+nmap <silent> <Leader>sv :so $MYVIMRC<CR>
+
 " map ^N to set no-highlight-search; see http://vim.wikia.com/wiki/VimTip93
 nmap <silent> <C-N> :silent noh<CR>
 

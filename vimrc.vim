@@ -25,6 +25,9 @@ set hidden
 " quick paste/nopaste toggling
 set pastetoggle=<F2>
 
+" remap ';' to ':'
+nnoremap ; :
+
 " FIXME
 filetype on
 

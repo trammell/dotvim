@@ -110,6 +110,9 @@ let NERDTreeIgnore=['\.pyc$','\.swp$']
 " fugitive status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" vimwiki setup
+let g:vimwiki_list = [{'path': '~/.vimwiki/'}]
+
 " conditionally load defs from '~/.vim/vimau.vim'
 " see e.g. http://vim.wikia.com/wiki/Loading_scripts_in_vimrc_safely
 if filereadable($HOME . "/.vim/vimau.vim")

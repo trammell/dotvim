@@ -60,7 +60,7 @@ autocmd BufNewFile *.sql     0read ~/.vim/templates/template.sql
 autocmd BufNewFile *.t       0read ~/.vim/templates/template.t
 autocmd BufNewFile *.txt     0read ~/.vim/templates/template.txt
 
-autocmd BufWritePre *.cfg   :%s/\s\+$//e
+"autocmd BufWritePre *.cfg   :%s/\s\+$//e
 autocmd BufWritePre *.php   :%s/\s\+$//e
 autocmd BufWritePre *.pt    :%s/\s\+$//e
 autocmd BufWritePre *.scm   :%s/\s\+$//e
@@ -69,7 +69,6 @@ autocmd BufWritePre *.tt2   :%s/\s\+$//e
 autocmd BufWritePre *.txt   :%s/\s\+$//e
 autocmd BufWritePre *.yaml  :%s/\s\+$//e
 autocmd BufWritePre *.zcml  :%s/\s\+$//e
-autocmd BufWritePre .vimrc  :%s/\s\+$//e
 
 autocmd FileType cpp          set ai et ts=4 tw=78
 autocmd FileType css          set ai et ts=4

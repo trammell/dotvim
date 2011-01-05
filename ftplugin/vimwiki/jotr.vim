@@ -11,7 +11,6 @@ setlocal expandtab
 setlocal tabstop=2
 setlocal foldmethod=marker
 setlocal textwidth=75
-setlocal list
-setlocal listchars=trail:-,tab:\.\
+setlocal nolist
 
 let maplocalleader = ","

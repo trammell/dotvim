@@ -24,3 +24,4 @@ endfunction
 
 " mappings
 nmap <LocalLeader>h :call StandardCPPHeader()<CR>
+nmap <LocalLeader>e :call PerlMathEval()<CR>

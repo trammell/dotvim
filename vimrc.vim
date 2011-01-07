@@ -63,7 +63,7 @@ endif
 
 let mapleader = ","
 
-"nmap <Leader>e :call PerlMathEval()<CR>
+nmap <Leader>e :call PerlMathEval()<CR>
 "nmap <Leader>h :let @/ = "" <CR>
 
 " fugitive shortcuts
@@ -76,10 +76,11 @@ map <Leader>nt :NERDTree<CR>
 " handy function to evaluate perl expressions
 function! PerlMathEval()
 perl << EOF
-    $lnum = ($curwin->Cursor)[0];
-    $line = $curbuf->Get($lnum);
-    $line =~ s{.*=}{};
-    $curbuf->Append($lnum, eval $line);
+    my $row = ($curwin->Cursor)[0];
+    my $line = $curbuf->Get($row);
+    $line =~ s{^\s*(?://|#)}{};     # strip leading comment chars
+    $line =~ s{=.*}{};              # strip trailing =...
+    $curbuf->Append($row, eval $line);
 EOF
 endfunction
 
@@ -93,6 +94,8 @@ nmap <silent> <C-N> :silent noh<CR>
 " see Vim Tip #1066: Quickly adding and deleting empty lines
 " http://vim.sourceforge.net/tips/tip.php?tip_id=1066
 noremap <silent><C-k> mz:silent +g/\m^\s*$/d<CR>`z:noh<CR>
+
+map <silent> <Leader>ss :%s/\s\+$//e
 
 set background=dark
 set incsearch
@@ -109,6 +112,7 @@ let NERDTreeIgnore=['\.pyc$','\.swp$']
 
 " fugitive status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
 
 " vimwiki setup
 let g:vimwiki_list = [{'path': '~/.vimwiki/'}]

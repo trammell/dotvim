@@ -101,7 +101,7 @@ map <silent> <Leader>ss :%s/\s\+$//e
 set background=dark
 set incsearch
 " set hlsearch
-colorscheme elflord
+colorscheme darkrobot
 set whichwrap=<,>,h,l,[,]
 
 " install pathogen
@@ -114,8 +114,7 @@ let NERDTreeIgnore=['\.pyc$','\.swp$']
 " fugitive status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-
-" vimwiki setup
+" vimwiki setup (HTML goes into "~/Dropbox/vimwiki_html")
 let g:vimwiki_list = [{'path': '~/.vimwiki/'}]
 
 " conditionally load defs from '~/.vim/vimau.vim'

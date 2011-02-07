@@ -10,7 +10,6 @@ set wildmenu
 set wildmode=list:longest
 set ignorecase                  " ignore case differences while searching
 set nocompatible                " make Vim less vi-compatible
-set cryptmethod=blowfish
 
 " try to use syntax highlighting
 syntax enable
@@ -60,6 +59,11 @@ if has('gui_running')
         set columns=120
         set guifont=Menlo\ Regular:h14
     endif
+endif
+
+" version-specific settings
+if version >= 703
+    set cryptmethod=blowfish
 endif
 
 let mapleader = ","

@@ -13,7 +13,7 @@ setlocal autoindent
 setlocal expandtab
 setlocal smartindent        " do I really want this?
 setlocal tabstop=4
-setlocal textwidth=80
+setlocal textwidth=79
 "setlocal number
 
 " set up mappings for python

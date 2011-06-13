@@ -14,6 +14,7 @@ setlocal expandtab
 setlocal smartindent        " do I really want this?
 setlocal tabstop=4
 setlocal textwidth=79
+setlocal foldmethod=indent
 "setlocal number
 
 " set up mappings for python

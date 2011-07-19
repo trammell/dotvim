@@ -103,7 +103,7 @@ nmap <silent> <C-N> :silent noh<CR>
 " http://vim.sourceforge.net/tips/tip.php?tip_id=1066
 noremap <silent><C-k> mz:silent +g/\m^\s*$/d<CR>`z:noh<CR>
 
-map <silent> <Leader>ss :%s/\s\+$//e
+map <silent> <Leader>K :%s/\s\+$//e
 
 set background=dark
 set incsearch
@@ -116,7 +116,7 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
 " NERDTree config
-let NERDTreeIgnore=['\.pyc$','\.swp$']
+let NERDTreeIgnore=['\.py[co]$','\.swp$']
 
 " fugitive status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P

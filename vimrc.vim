@@ -69,7 +69,10 @@ endif
 let mapleader = ","
 
 nmap <Leader>e :call PerlMathEval()<CR>
-"nmap <Leader>h :let @/ = "" <CR>
+
+" set up a mapping to clear the search register (this clears the search
+" highlighting too, and is nicer than nohlsearch)
+nmap <Leader>h :let @/=""<CR>
 
 " fugitive shortcuts
 map <Leader>Gs :Gstatus<CR>

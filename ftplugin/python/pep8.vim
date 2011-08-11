@@ -26,12 +26,12 @@ function! <SID>Pep8()
   redraw!
 endfunction
 
-if ( !hasmapto('<SID>PEP8()') && (maparg('<S-F7>') == '') )
-  map  <S-F7> :call <SID>Pep8()<CR>
-  map! <S-F7> :call <SID>Pep8()<CR>
+if ( !hasmapto('<SID>PEP8()') && (maparg('<C-F7>') == '') )
+  map  <C-F7> :call <SID>Pep8()<CR>
+  map! <C-F7> :call <SID>Pep8()<CR>
 else
   if ( !has("gui_running") || has("win32") )
     echo "Python PEP8 Error: No Key mapped.\n".
-          \ "<S-F7> is taken and a replacement was not assigned."
+          \ "<C-F7> is taken and a replacement was not assigned."
   endif
 endif

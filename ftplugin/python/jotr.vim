@@ -23,3 +23,6 @@ let maplocalleader = ","
 
 nmap <LocalLeader>p oimport pdb; pdb.set_trace()<ESC>
 nmap <LocalLeader>v oimport vimpdb; vimpdb.set_trace()<ESC>
+
+let g:pep8_map='<F5>'
+

@@ -6,9 +6,13 @@ if exists("b:loaded_ftplugin_xml_jotr")
 endif
 let b:loaded_ftplugin_xml_jotr = 1
 
+" turn on syntax folding
+let g:xml_syntax_folding = 1
+set foldmethod=syntax
+"setlocal foldmethod=marker
+
 "setlocal autoindent
 setlocal expandtab
-setlocal foldmethod=marker
 setlocal tabstop=2
 setlocal textwidth=999
 

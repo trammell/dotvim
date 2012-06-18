@@ -14,7 +14,7 @@ setlocal expandtab
 setlocal smartindent        " do I really want this?
 setlocal tabstop=4
 setlocal textwidth=79
-setlocal foldmethod=indent
+"setlocal foldmethod=indent
 "setlocal cursorline
 "setlocal number
 
@@ -24,5 +24,5 @@ let maplocalleader = ","
 nmap <LocalLeader>p oimport pdb; pdb.set_trace()<ESC>
 nmap <LocalLeader>v oimport vimpdb; vimpdb.set_trace()<ESC>
 
-let g:pep8_map='<F5>'
+"let g:pep8_map='<S-F5>'
 

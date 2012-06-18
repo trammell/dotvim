@@ -22,6 +22,9 @@ set listchars=trail:-,tab:\.\
 " hide buffers instead of closing them
 set hidden
 
+" aggressively search for tags files
+set tags=tags;/
+
 " quick paste/nopaste toggling
 set pastetoggle=<F2>
 
@@ -69,6 +72,12 @@ endif
 let mapleader = ","
 
 nmap <Leader>e :call PerlMathEval()<CR>
+
+"
+if isdirectory("parts/omelette/")
+    chdir parts/omelette/
+endif
+
 
 " set up a mapping to clear the search register (this clears the search
 " highlighting too, and is nicer than nohlsearch)

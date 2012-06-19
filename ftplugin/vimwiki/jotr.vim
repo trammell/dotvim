@@ -5,7 +5,7 @@ endif
 
 let b:loaded_ftplugin_vimwiki_jotr = 1
 
-"setlocal directory=~/.tmp//,~/tmp//,/var/tmp//,/tmp//
+setlocal background=light
 setlocal noswapfile
 setlocal expandtab
 setlocal tabstop=2
@@ -14,3 +14,6 @@ setlocal textwidth=75
 setlocal nolist
 
 let maplocalleader = ","
+
+nnoremap <leader>dm o== daily meeting ==<cr><esc>
+

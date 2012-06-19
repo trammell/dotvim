@@ -6,6 +6,8 @@ if exists("b:loaded_ftplugin_python_jotr")
 endif
 let b:loaded_ftplugin_python_jotr = 1
 
+let g:pep8_map=',p8'
+
 " http://www.reddit.com/r/vim/comments/euon6/why_does_vims_python_default_behavior_suck_so/
 "filetype plugin indent on
 
@@ -18,11 +20,11 @@ setlocal foldmethod=indent
 "setlocal cursorline
 "setlocal number
 
+noremap  <buffer> <LocalLeader>pf :call Pyflakes()<CR>
+
 " set up mappings for python
 let maplocalleader = ","
 
-nmap <LocalLeader>p oimport pdb; pdb.set_trace()<ESC>
+nmap <LocalLeader>pdb oimport pdb; pdb.set_trace()<ESC>
+nmap <LocalLeader>pf :call Pyflakes()<CR>
 nmap <LocalLeader>v oimport vimpdb; vimpdb.set_trace()<ESC>
-
-let g:pep8_map='<F5>'
-

@@ -13,7 +13,8 @@ set nocompatible                " make Vim less vi-compatible
 
 " try to use syntax highlighting
 syntax enable
-syntax sync fromstart
+    syntax sync fromstart
+
 
 " turn on highlighting of trailing spaces
 set list
@@ -67,19 +68,20 @@ if version >= 703
 endif
 
 let mapleader = ","
+let maplocalleader = ","
 
-nmap <Leader>e :call PerlMathEval()<CR>
+nnoremap <Leader>e :call PerlMathEval()<CR>
 
 " set up a mapping to clear the search register (this clears the search
 " highlighting too, and is nicer than nohlsearch)
-nmap <Leader>h :let @/=""<CR>
+nnoremap <Leader>h :let @/=""<CR>
 
 " fugitive shortcuts
-map <Leader>Gs :Gstatus<CR>
-map <Leader>Gd :Gdiff<CR>
+nnoremap <Leader>Gs :Gstatus<CR>
+nnoremap <Leader>Gd :Gdiff<CR>
 
 " nerdtree shortcuts
-map <Leader>nt :NERDTree<CR>
+nnoremap <Leader>nt :NERDTree<CR>
 
 " handy function to evaluate perl expressions
 function! PerlMathEval()
@@ -93,17 +95,15 @@ EOF
 endfunction
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <Leader>ev :e $MYVIMRC<CR>
-nmap <silent> <Leader>sv :so $MYVIMRC<CR>
+nnoremap <silent> <Leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <Leader>sv :so $MYVIMRC<CR>
 
 " map ^N to set no-highlight-search; see http://vim.wikia.com/wiki/VimTip93
-nmap <silent> <C-N> :silent noh<CR>
+nnoremap <silent> <C-N> :silent noh<CR>
 
 " see Vim Tip #1066: Quickly adding and deleting empty lines
 " http://vim.sourceforge.net/tips/tip.php?tip_id=1066
 noremap <silent><C-k> mz:silent +g/\m^\s*$/d<CR>`z:noh<CR>
-
-map <silent> <Leader>K :%s/\s\+$//e<CR>
 
 set background=dark
 set incsearch
@@ -122,7 +122,7 @@ let NERDTreeIgnore=['\.py[co]$','\.swp$']
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " vimwiki setup (HTML goes into "~/Dropbox/vimwiki_html")
-let g:vimwiki_list = [{'path': '~/.vimwiki/'}, {'path': '~/.hcvimwiki'}]
+let g:vimwiki_list = [{'path': '~/.vimwiki'}, {'path': '~/.outsell-vimwiki'}, {'path': '~/.hc-vimwiki'}]
 let g:vimwiki_folding = 1
 
 " conditionally load defs from '~/.vim/vimau.vim'
@@ -130,3 +130,16 @@ let g:vimwiki_folding = 1
 if filereadable($HOME . "/.vim/vimau.vim")
     source $HOME/.vim/vimau.vim
 endif
+
+
+" exercises from Learn Vimscript the Hard Way
+"  echo ">^.^<"
+
+inoremap <leader><c-u> <esc>viwUi
+nnoremap <leader><c-u> viwU
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+iabbrev @@ johntrammell@gmail.com
+iabbrev jsut just
+

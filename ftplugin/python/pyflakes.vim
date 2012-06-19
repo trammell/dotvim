@@ -67,7 +67,8 @@ endif
 " remapped it already (or a mapping exists already for <F7>)
 if !exists("no_plugin_maps") && !exists("no_pyflakes_maps")
     if !hasmapto('Pyflakes()')
-        noremap <buffer> <F7> :call Pyflakes()<CR>
+        noremap  <buffer> <F7> :call Pyflakes()<CR>
         noremap! <buffer> <F7> :call Pyflakes()<CR>
+        noremap! <buffer> <LocalLeader>pf :call Pyflakes()<CR>
     endif
 endif

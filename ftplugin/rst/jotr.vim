@@ -10,7 +10,12 @@ setlocal autoindent
 setlocal expandtab
 setlocal smartindent        " do I really want this?
 setlocal tabstop=4
-setlocal textwidth=79
+setlocal textwidth=78
+"setlocal textwidth=79
 setlocal foldmethod=indent
 "setlocal cursorline
 "setlocal number
+"setlocal foldmethod=syntax
+setlocal list
+setlocal listchars=trail:-,tab:\.\
+

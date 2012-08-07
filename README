@@ -8,6 +8,14 @@ Installation
    % git submodule init
    % git submodule update
 
+
+Alternative Installation
+=======================
+
+
+   % https://raw.github.com/trammell/dotvim/master/setup.sh
+
+
 Submodules
 ==========
 

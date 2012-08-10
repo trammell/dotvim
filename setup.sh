@@ -7,14 +7,16 @@ if [ -d "~/.vim/" ]; then
     echo "~/.vim/ already exists--aborting"
     exit 1
 else
+    echo "creating symbolic link to ~/.vim/"
     ln -s `pwd`/dotvim ~/.vim
 fi
 
 # symlink to the actual vimrc file
-if [ -e "~/.vimrc" ]; then
+if [ -e ~/.vimrc ]; then
     echo "~/.vimrc already exists--aborting"
     exit 1
 else
+    echo "creating symbolic link to ~/.vimrc"
     ln -s ~/.vim/vimrc.vim ~/.vimrc
 fi
 

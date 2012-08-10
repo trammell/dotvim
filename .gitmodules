@@ -6,7 +6,7 @@
 	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = https://github.com/edsono/vim-matchit.git
@@ -21,7 +21,7 @@
 	url = https://github.com/vim-scripts/vcscommand.vim.git
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
-	url = git://github.com/msanders/snipmate.vim.git
+	url = https://github.com/msanders/snipmate.vim.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git

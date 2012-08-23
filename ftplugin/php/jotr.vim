@@ -11,7 +11,7 @@ setlocal foldmethod=syntax
 setlocal tabstop=4
 setlocal textwidth=78
 setlocal list
-setlocal listchars=trail:-,tab:\.\
+setlocal listchars=trail:-,tab:\ \ 
 "setlocal listchars=trail:-,tab:  
 "setlocal listchars=trail:-
 setlocal noet

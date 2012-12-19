@@ -18,6 +18,11 @@ setlocal noet
 
 let maplocalleader = ","
 
+setlocal comments=s1:/*,mb:*,elx:*/
+
 "highlight ExtraWhiteSpace ctermbg=red guibg=red
 "match ExtraWhiteSpace /^\t*\zs \+/
+
+" simple syntax checker
+nmap <LocalLeader>sy :!php -l %<CR>
 

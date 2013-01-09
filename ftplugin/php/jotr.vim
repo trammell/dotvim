@@ -7,18 +7,20 @@ endif
 let b:loaded_ftplugin_php_jotr = 1
 
 setlocal autoindent
+setlocal expandtab
 setlocal foldmethod=syntax
 setlocal tabstop=4
 setlocal textwidth=78
 setlocal list
-setlocal listchars=trail:-,tab:\ \ 
+setlocal listchars=trail:-,tab:\.\
 "setlocal listchars=trail:-,tab:  
 "setlocal listchars=trail:-
-setlocal noet
+"setlocal noet
 
 let maplocalleader = ","
 
-setlocal comments=s1:/*,mb:*,elx:*/
+setlocal formatoptions=coqr
+setlocal comments=sr:/*,mb:*,ex:*/,b:#
 
 "highlight ExtraWhiteSpace ctermbg=red guibg=red
 "match ExtraWhiteSpace /^\t*\zs \+/

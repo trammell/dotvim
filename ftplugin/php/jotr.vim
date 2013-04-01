@@ -20,7 +20,7 @@ setlocal listchars=trail:-,tab:\.\
 let maplocalleader = ","
 
 setlocal formatoptions=coqr
-setlocal comments=sr:/*,mb:*,ex:*/,b:#
+setlocal comments+=sr:/*,mb:*,ex:*/,b:#
 
 "highlight ExtraWhiteSpace ctermbg=red guibg=red
 "match ExtraWhiteSpace /^\t*\zs \+/

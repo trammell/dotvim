@@ -1,14 +1,14 @@
-" filetype plugin for smarty templates
+" filetype plugin for JSON files
 
 " idempotent
-if exists("b:loaded_ftplugin_smarty")
+if exists("b:loaded_ftplugin_json")
     finish
 endif
-let b:loaded_ftplugin_smarty = 1
+let b:loaded_ftplugin_json = 1
 
 setlocal autoindent
 setlocal foldmethod=syntax
-setlocal tabstop=4
+setlocal tabstop=3
 setlocal textwidth=78
 setlocal list
 setlocal listchars=trail:-,tab:\ \ 

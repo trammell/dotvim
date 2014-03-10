@@ -44,6 +44,10 @@ augroup filetypedetect
    au BufNewFile,BufRead *.R           set syntax=r
    au BufNewFile,BufRead *.t           set tw=200
 
+" autocommands to convert any leading spaces to tabs
+autocmd BufReadPost,FileReadPost,FileWritePre *.php %!unexpand -t 4 --first-only %
+
+
 augroup END
 
 autocmd BufNewFile *.html    0read ~/.vim/templates/template.ma
@@ -51,6 +55,7 @@ autocmd BufNewFile *.ma      0read ~/.vim/templates/template.ma
 autocmd BufNewFile makefile  0read ~/.vim/templates/template.make
 autocmd BufNewFile Makefile  0read ~/.vim/templates/template.make
 autocmd BufNewFile *.mas     0read ~/.vim/templates/template.ma
+autocmd BufNewFile *.php     0read ~/.vim/templates/template.php
 autocmd BufNewFile *.pl      0read ~/.vim/templates/template.pl
 autocmd BufNewFile *.pm      0read ~/.vim/templates/template.pm
 autocmd BufNewFile *.py      0read ~/.vim/templates/template.py
@@ -76,7 +81,7 @@ autocmd FileType sql          set ai et ts=4 tw=75
 autocmd FileType text         set ai et ts=3 tw=75 foldmethod=marker
 autocmd FileType tt2          set ai et ts=3 tw=65
 autocmd FileType vim          set ai et ts=4 tw=78
-autocmd FileType yaml         set ai et ts=2 tw=75
+autocmd FileType yaml         set ai et ts=3 tw=75
 autocmd FileType html         set ai et ts=2 foldmethod=marker tw=78
 autocmd FileType xhtml        set ai et ts=2 foldmethod=marker
 autocmd FileType htmldjango   set ai et ts=2 foldmethod=marker tw=78

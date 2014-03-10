@@ -131,7 +131,7 @@ let NERDTreeIgnore=['\.py[co]$','\.swp$']
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " vimwiki setup (HTML goes into "~/Dropbox/vimwiki_html")
-"let g:vimwiki_list = [{'path': '~/.vimwiki'}, {'path': '~/.outsell-vimwiki'}, {'path': '~/.hc-vimwiki'}]
+let g:vimwiki_list = [{'path': '~/.vimwiki'}, {'path': '~/.outsell-vimwiki'}, {'path': '~/.hc-vimwiki'}]
 "let g:vimwiki_folding = 1
 
 " conditionally load defs from '~/.vim/vimau.vim'

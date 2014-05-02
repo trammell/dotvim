@@ -14,11 +14,6 @@ setlocal softtabstop=4
 setlocal tabstop=4
 setlocal textwidth=80
 
-"setlocal list
-"setlocal listchars=trail:-
-"setlocal listchars=trail:-,tab:\.\
-"setlocal listchars=trail:-,tab:  
-
 let maplocalleader = ","
 
 setlocal formatoptions=coqr

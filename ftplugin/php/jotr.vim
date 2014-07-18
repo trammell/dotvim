@@ -19,11 +19,14 @@ let maplocalleader = ","
 setlocal formatoptions=coqr
 setlocal comments+=sr:/*,mb:*,ex:*/,b:#
 
+
+" simple syntax checker
+nmap <LocalLeader>sy :!php -l %<CR>
+
+
 " syntax highlighting to show non-tab whitespace before text (up to 3
 " characters of space after the tabs are OK)
 highlight ExtraWhiteSpace ctermbg=red guibg=red
 match ExtraWhiteSpace /^\t*\zs \{4,}\ze[^\t ]/
-
-" simple syntax checker
-nmap <LocalLeader>sy :!php -l %<CR>
+match ExtraWhiteSpace /\s\+$/
 

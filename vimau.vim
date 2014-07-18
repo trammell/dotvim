@@ -45,7 +45,7 @@ augroup filetypedetect
    au BufNewFile,BufRead *.t           set tw=200
 
 " autocommands to convert any leading spaces to tabs
-autocmd BufReadPost,FileReadPost,FileWritePre *.php %!unexpand -t 4 --first-only %
+" autocmd BufReadPost,FileReadPost,FileWritePre *.php %!unexpand -t 4 --first-only %
 
 
 augroup END
